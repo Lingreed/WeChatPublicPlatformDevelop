@@ -1,3 +1,20 @@
-#chat:
-#  host: test.kejicn.cc
+#微信企业号
+wechat:
+    # 企业Id
+    corpid: wxc6d61820341f41b3
+    # 管理组的凭证密钥
+    corpsecrt: 8Jyb4stfCV9jDvA6Y0TmLOOM641J0HHpHKLs1S9x_3P5pOyxSEgttk-BmlE9eHO8
+    #回调签名
+    token: ScFmFW2a4CI
+    #AES密钥的Base64编码
+    aesKey: F3OJmog4POXc9QPixWrOv5IWhFgo8D1U9QrYtCDvDYx
+
+    # 推送消息内容
+    content: 推送消息。。。%1$s[惊恐][晕][发呆]%2$s【%3$s】%4$s服务器异常！地址：【%5$s】
+    # 消息接收者、成员ID列表
+    toUser: bryanlin
+    # 消息接收者
+    toParty: 2
+    # 企业应用id
+    agentid: 7
   
