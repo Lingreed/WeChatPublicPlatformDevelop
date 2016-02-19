@@ -94,7 +94,6 @@ public class WXPushMessageController {
 
             //分发
             String response =  wxDispatcher.dispatcher(result);
-
             //返回加密后的用户xml消息
             return wxBizMsgCrypt.EncryptMsg(response, timeStamp, nonce);
         } catch (AesException e) {

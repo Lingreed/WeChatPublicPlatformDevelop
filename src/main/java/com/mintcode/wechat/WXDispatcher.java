@@ -19,16 +19,16 @@ import java.util.Map;
 @Component
 public class WXDispatcher {
     public String dispatcher(Map msgMap){
-        String msgType = msgMap.get("MsgType").toString();
+        String msgType = msgMap.get("msgType").toString();
         String result = "";
         switch(msgType){
             case "event":
-                String event = msgMap.get("Event").toString();
+                String event = msgMap.get("event").toString();
                 switch(event){
-                    case "CLICK":
+                    case "click":
                         result = clickEvent(msgMap);
                         break;
-                    case "VIEW":
+                    case "view":
                         break;
                     default:
                         break;
@@ -47,7 +47,7 @@ public class WXDispatcher {
     public String clickEvent(Map msgMap){
         String toUserName = msgMap.get("toUserName").toString();
         String fromUserName = msgMap.get("fromUserName").toString();
-        String eventKey = msgMap.get("EventKey").toString();
+        String eventKey = msgMap.get("eventKey").toString();
         Long createTime = System.currentTimeMillis();
         String content = "";
         // 返回数据
@@ -67,7 +67,6 @@ public class WXDispatcher {
             default:
                 break;
         }
-
         return WXUtility.clickXml(toUserName, fromUserName, createTime, content);
     }
 
@@ -75,7 +74,7 @@ public class WXDispatcher {
     public String textReply(Map msgMap){
         String toUserName = msgMap.get("toUserName").toString();
         String fromUserName = msgMap.get("fromUserName").toString();
-        String msgContent = msgMap.get("Content").toString();
+        String msgContent = msgMap.get("content").toString();
         Long createTime = System.currentTimeMillis();
         String content = "别以为我听不清，你丫BB的是这个：" + msgContent;
 

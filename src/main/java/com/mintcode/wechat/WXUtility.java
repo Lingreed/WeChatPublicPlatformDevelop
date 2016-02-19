@@ -67,11 +67,11 @@ public class WXUtility {
                     String Event = EventNode.item(0).getTextContent();
                     result.put("event", Event);
                     switch (Event) {
-                        case "CLICK":
+                        case "click":
                             NodeList eventKey = root.getElementsByTagName("EventKey");
                             result.put("eventKey", eventKey.item(0).getTextContent());
                             break;
-                        case "VIEW":
+                        case "view":
                             NodeList eventKey2 = root.getElementsByTagName("EventKey");
                             result.put("eventKey", eventKey2.item(0).getTextContent());
                             break;
